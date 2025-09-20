@@ -2,13 +2,17 @@ query GetReviews {
   allMovieReviews {
     nodes {
       id
+      title
       body
       rating
       movieByMovieId {
         id
         title
       }
-      userReviewerId
+      userByUserReviewerId {
+        id
+        name
+      }
     }
   }
 }
